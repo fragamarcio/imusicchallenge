@@ -22,11 +22,16 @@ public class Product {
     private BigDecimal prize;
     private Long amount;
 
-
+    /**
+     * Empty product's constructor.
+     */
     public Product(){
 
     }
 
+    /**
+     * Product's constructor with parameters.
+     */
     public Product(String name, BigDecimal prize, Long amount) {
         this.name = name;
         this.prize = prize;
@@ -34,8 +39,8 @@ public class Product {
     }
 
 
-    public ObjectId get_id() {
-        return _id;
+    public String get_id() {
+        return _id.toHexString();
     }
 
     public void set_id(ObjectId _id) {
